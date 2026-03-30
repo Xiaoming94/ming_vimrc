@@ -26,6 +26,7 @@ require("markdown_render_init")
 require("gitsigns_init")
 require("treesitter_init")
 require("blame_lines")
+require("scrollview_nvim")
 
 -- set tabs
 vim.o.tabstop = 4

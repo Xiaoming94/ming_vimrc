@@ -66,3 +66,9 @@ tags
 [._]*.un~
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,lua
+
+# Ignoring local specific plugins
+vimrc.d/specific.plugs.vimrc
+vimrc.d/useradded.vimrc
+nvim/local.nvimplugs.vimrc
+

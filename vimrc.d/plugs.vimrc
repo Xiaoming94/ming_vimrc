@@ -57,4 +57,4 @@ call plug#begin()
 
 call plug#end()
 
-
+" vim: set ft=vim

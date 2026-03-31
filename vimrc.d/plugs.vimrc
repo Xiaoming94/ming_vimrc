@@ -10,11 +10,11 @@ function! LoadNvimPlugs()
 endfunction
 
 call plug#begin()
-    " NERDTree
-
+    source ~/.vimrc.d/common.plugs.vimrc
     if has('nvim')
         call LoadNvimPlugs()
     else
+        " NERDTree
         Plug 'preservim/nerdtree'
         " Color previewer
         Plug 'BourgeoisBear/clrzr'
@@ -25,34 +25,11 @@ call plug#begin()
         endif
     endif
 
-    " i3 syntax highlighting
-    Plug 'PotatoesMaster/i3-vim-syntax'
-
-    " autoclose
-    Plug 'jiangmiao/auto-pairs'
-
-    " hyprland syntax
-    Plug 'theRealCarneiro/hyprland-vim-syntax'
-
-    " Filetypes
-    Plug 'udalov/kotlin-vim'
-    Plug 'elixir-editors/vim-elixir'
-
-    " Syntax highlighting for different programming languages
-    Plug 'elzr/vim-json'
-
     " Git integration
     Plug 'mhinz/vim-signify'         " Showing edits and diffs
-    Plug 'tpope/vim-fugitive'        " Git command integrations
-    Plug 'rhysd/conflict-marker.vim' " Visualising Merge conflicts
-
-    " Surround visual marked words
-    Plug 'tpope/vim-surround'
 
     " Colorschemes
     Plug 'sickill/vim-monokai'
-    Plug 'tomasr/molokai'
-    Plug 'dracula/vim'
     call  LoadEnvPlugs()
 
 call plug#end()

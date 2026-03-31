@@ -5,24 +5,18 @@ function! LoadEnvPlugs()
     endif
 endfunction
 
-function! LoadNvimPlugs()
-    source ~/.vimrc.d/nvimplugs.vimrc
-endfunction
-
 call plug#begin()
     source ~/.vimrc.d/common.plugs.vimrc
-    if has('nvim')
-        call LoadNvimPlugs()
-    else
-        " NERDTree
-        Plug 'preservim/nerdtree'
-        " Color previewer
-        Plug 'BourgeoisBear/clrzr'
 
-        " Load YCM if there is python3
-        if has('python3')
-            Plug 'ycm-core/YouCompleteMe'
-        endif
+    " NERDTree
+    Plug 'preservim/nerdtree'
+
+    " Color previewer
+    Plug 'BourgeoisBear/clrzr'
+
+    " Load YCM if there is python3
+    if has('python3')
+        Plug 'ycm-core/YouCompleteMe'
     endif
 
     " Git integration

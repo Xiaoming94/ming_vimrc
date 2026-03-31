@@ -1,7 +1,8 @@
 -- Source vanilla vimrc
 local vim = vim
+require("vimplug_init")
 
-vim.cmd("source ~/.vimrc")
+vim.cmd("source ~/.vimrc.d/common.vim")
 -- LSP stuff
 require("lsp/common_functions")
 require("lsp/clangd_conf")

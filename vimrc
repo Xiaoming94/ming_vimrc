@@ -1,12 +1,11 @@
 " .vimrc vim config file
 " Author: Xiaoming94
 
+" Setting up vimplug
 source ~/.vimrc.d/plugs.vimrc
 
-" Set tabs
-set tabstop=4
-set softtabstop=4
-set expandtab
+" Sourcing common configs
+source ~/.vimrc.d/common.vim
 
 " Powerline
 " Vim powerline is not supported in neovim
@@ -26,7 +25,7 @@ set laststatus=2
 " Colorscheme and syntax highlighting
 syntax on
 colorscheme molokai
-let g:molokai_original=1 
+let g:molokai_original=1
 
 " Mouse support
 set mouse=a
@@ -34,13 +33,6 @@ set mouse=a
 let g:gitsign#auto_enable=1
 let g:gitsign#highlight#enable_lines = 0 "Git diff lines highlights are kinda obnoxious...
 let g:gitsign#highlight#enable_marks = 1
-
-"Misc options
-set splitright
-set splitbelow
-set cursorline
-set number
-set termguicolors
 
 " Set vim swap directory
 set directory^=$HOME/.vim/swap//

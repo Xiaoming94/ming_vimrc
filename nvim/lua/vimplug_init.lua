@@ -14,7 +14,7 @@ local local_plugs = config_dir .. "/local.nvimplugs.vimrc"
 
 -- Sourcing local plugins
 if vim.fn.filereadable(local_plugs) == 1 then
-    vim.cmd("source" .. local_plugs)
+    vim.cmd("source " .. local_plugs)
 end
 
 vim.cmd [[call plug#end()]]

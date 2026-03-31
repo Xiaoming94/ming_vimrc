@@ -15,7 +15,6 @@ require("lsp/kotlin")
 require("lsp/ruby_rubocop")
 require("lsp/javalsp_conf")
 
-
 -- import plugin configurations
 require("init_nvim_tree")
 require("colorizer_init")

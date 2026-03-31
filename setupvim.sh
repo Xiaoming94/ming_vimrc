@@ -16,8 +16,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
             || echo "curl is not installed, install curl"
 
 # Setting up symlinks
-ln -s $REPO_ROOT/vimrc.d $HOME/.vimrc.d
-ln -s $REPO_ROOT/vimrc $HOME/.vimrc
+ln -sf $REPO_ROOT/vimrc.d $HOME/.vimrc.d
+ln -sf $REPO_ROOT/vimrc $HOME/.vimrc
 touch $HOME/.vimrc.user
 
 vim +'PlugInstall --sync' +qa

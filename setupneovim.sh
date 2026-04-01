@@ -5,7 +5,7 @@
 # This is so setting up will be easier on other platforms
 
 # Setting up variables
-REPO_ROOT=$(git rev-parse --show-toplevel)
+REPO_ROOT=$(cd -- "$(dirname -- "$0")" && pwd)
 
 vimrc_file=$HOME/.vimrc
 

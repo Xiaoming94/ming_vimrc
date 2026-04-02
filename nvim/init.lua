@@ -14,6 +14,7 @@ require("lsp/lint_conf")
 require("lsp/kotlin")
 require("lsp/ruby_rubocop")
 require("lsp/javalsp_conf")
+require("lsp/texlab_conf")
 
 -- import plugin configurations
 require("init_nvim_tree")
@@ -27,6 +28,7 @@ require("gitsigns_init")
 require("treesitter_init")
 require("blame_lines")
 require("scrollview_nvim")
+require("load_vimtex")
 
 -- set tabs
 vim.o.tabstop = 4

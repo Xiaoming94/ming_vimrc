@@ -24,6 +24,9 @@ Plug 'rhysd/conflict-marker.vim' " Visualising Merge conflicts
 " Surround visual marked words
 Plug 'tpope/vim-surround'
 
+" LaTeX
+Plug 'lervag/vimtex', { 'tag': 'v2.17' }
+
 " Colorschemes
 Plug 'tomasr/molokai'
 Plug 'dracula/vim'

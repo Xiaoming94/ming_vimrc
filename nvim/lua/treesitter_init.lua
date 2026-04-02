@@ -1,20 +1,12 @@
-require('nvim-treesitter.configs').setup({
-    ensure_installed = {
-        "c",
-        "cpp",
-        "css",
-        "rust",
-        "python",
-        "lua",
-        "vim",
-        "markdown",
-        "doxygen",
-    },
+local nvim_ts = require('nvim-treesitter')
 
-    sync_install = false,
-    auto_install = true,
-
-    highlight = {
-        enable = true,
-    },
+nvim_ts.install({
+    'c',
+    'cpp',
+    'css',
+    'rust',
+    'python',
+    'lua',
+    'markdown',
+    'doxygen',
 })

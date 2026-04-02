@@ -5,21 +5,20 @@
 # This is so setting up will be easier on other platforms
 
 # Setting up variables
+
 REPO_ROOT=$(cd -- "$(dirname -- "$0")" && pwd)
+source "$REPO_ROOT/link_common.sh"
 
-vimrc_file=$HOME/.vimrc
-
-if [[ -f "$vimrc_file" ]]; then
-    echo "vimrc exists"
-else
-    bash $REPO_ROOT/setupvim.sh
-fi
+vimplug_path="${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim
 
 echo "===== Setting up neovim ====="
 
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' || echo "curl is not installed!"
+install_vimplug "$vimplug_path"
 
+link_common_vimrc
+
+echo "Downloading all the plugins"
 ln -sf $REPO_ROOT/nvim $HOME/.config/nvim
 
 nvim +'PlugInstall --sync' +qa
+echo "===== INSTALLATION COMPLETE ====="

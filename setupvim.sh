@@ -6,18 +6,21 @@
 
 # Setting up variables
 REPO_ROOT=$(cd -- "$(dirname -- "$0")" && pwd)
+source "$REPO_ROOT/link_common.sh"
 
 echo "===== Setting up vim ====="
 
 # Setting up vim with vim-plugs
+vimplug_path="~/.vim/autoload/plug.vim"
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
-            || echo "curl is not installed, install curl"
+install_vimplug "$vimplug_path"
 
-# Setting up symlinks
-ln -sf $REPO_ROOT/vimrc.d $HOME/.vimrc.d
+link_common_vimrc
+
+echo "Downloading all the plugins"
+
 ln -sf $REPO_ROOT/vimrc $HOME/.vimrc
 touch $HOME/.vimrc.user
 
 vim +'PlugInstall --sync' +qa
+echo "===== INSTALLATION COMPLETE ====="

@@ -33,11 +33,11 @@ require("load_vimtex")
 -- More config options
 vim.g.airline_powerline_fonts = 1
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    pattern = { "*" },
-    command = [[%s/\s\+$//e]],
+	pattern = { "*" },
+	command = [[%s/\s\+$//e]],
 })
 
-vim.opt.wrap = true;
+vim.opt.wrap = true
 
 -- Keybinds
 

@@ -1,1 +1,1 @@
-vim.lsp.enable('texlab')
+vim.lsp.enable("texlab")

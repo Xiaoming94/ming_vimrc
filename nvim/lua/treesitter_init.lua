@@ -1,12 +1,12 @@
-local nvim_ts = require('nvim-treesitter')
+local nvim_ts = require("nvim-treesitter")
 
 nvim_ts.install({
-    'c',
-    'cpp',
-    'css',
-    'rust',
-    'python',
-    'lua',
-    'markdown',
-    'doxygen',
+	"c",
+	"cpp",
+	"css",
+	"rust",
+	"python",
+	"lua",
+	"markdown",
+	"doxygen",
 })

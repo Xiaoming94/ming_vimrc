@@ -30,12 +30,6 @@ require("blame_lines")
 require("scrollview_nvim")
 require("load_vimtex")
 
--- set tabs
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-
 -- More config options
 vim.g.airline_powerline_fonts = 1
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {

@@ -1,5 +1,5 @@
 require("conform").setup({
-    formatter_by_ft = {
+    formatters_by_ft = {
         lua = { "stylua" },
         rust = { "rustfmt", lsp_format = "fallback" },
     },

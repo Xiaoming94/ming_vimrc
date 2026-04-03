@@ -20,7 +20,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				buffer = args.buf,
 				callback = function()
-					if vim.bo[args.buf].filetype ~= "lua" then
+					local conform = require("conform")
+					local formatters = conform.list_formatters(args.buf)
+					if #formatters > 0 then
+						conform.format({ bufnr = args.buf })
+					else
 						vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
 					end
 				end,

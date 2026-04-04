@@ -1,16 +1,24 @@
 -- Source vanilla vimrc
 local vim = vim
-require("vimplug_init").execute(true)
+local settings = require("default_config")
+require("vimplug_init").execute(settings.use_meson)
 
 vim.cmd("source ~/.vimrc.d/common.vim")
 -- LSP stuff
-require("lsp.mason_setup")
+
+if settings.use_meson then
+	require("lsp.mason_setup")
+end
+
 require("lsp.common_functions")
-require("lsp.clangd_conf")
-require("lsp.rust_analyzer_conf")
 require("lsp.formatter")
 require("lsp.lint_conf")
-require("lsp.javalsp_conf")
+
+if settings.provided_lsp then
+	require("lsp.clangd_conf")
+	require("lsp.rust_analyzer_conf")
+	require("lsp.javalsp_conf")
+end
 
 -- import plugin configurations
 require("init_nvim_tree")
@@ -26,9 +34,6 @@ require("blame_lines")
 require("scrollview_nvim")
 require("load_vimtex")
 
-local custom_lua = vim.fn.stdpath("config") .. "/user_config.lua"
-if vim.uv.fs_stat(custom_lua) then
-	vim.cmd("luafile " .. custom_lua)
-else
-	require("default_config")
+if settings.post_settings then
+	settings.post_settings()
 end

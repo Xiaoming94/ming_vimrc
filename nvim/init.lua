@@ -1,8 +1,13 @@
--- Source vanilla vimrc
 local vim = vim
-local settings = require("default_config")
+
+local user_config_defined, settings = pcall(require, "user_config")
+if not user_config_defined then
+	settings = require("default_config")
+end
+
 require("vimplug_init").execute(settings.use_meson)
 
+-- Source vanilla vimrc
 vim.cmd("source ~/.vimrc.d/common.vim")
 -- LSP stuff
 

@@ -11,19 +11,14 @@ vim.opt.wrap = true
 
 -- default colorscheme configs for some configs
 
-require("cyberdream").setup({
-	transparent = true,
-	colors = {
-		bg = "#0a1c3f",
-	},
-})
-
-require("synthweave").setup({
-	transparent = false,
-	palette = {
-		bg0 = "#2b1335",
-	},
-})
+local cyberdream_setup = function()
+	require("cyberdream").setup({
+		transparent = true,
+		colors = {
+			bg = "#0a1c3f",
+		},
+	})
+end
 
 -- colorscheme
-require("colorscheme_helper").set_colorscheme("cyberdream")
+require("colorscheme_helper").set_colorscheme("cyberdream", cyberdream_setup)

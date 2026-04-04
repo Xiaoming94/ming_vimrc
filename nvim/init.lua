@@ -1,6 +1,6 @@
 -- Source vanilla vimrc
 local vim = vim
-require("vimplug_init")
+require("vimplug_init").execute(true)
 
 vim.cmd("source ~/.vimrc.d/common.vim")
 -- LSP stuff

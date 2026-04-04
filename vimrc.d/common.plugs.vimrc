@@ -30,4 +30,4 @@ Plug 'lervag/vimtex', { 'tag': 'v2.17' }
 " Colorschemes
 Plug 'tomasr/molokai'
 Plug 'dracula/vim'
-
+Plug 'sainnhe/sonokai'

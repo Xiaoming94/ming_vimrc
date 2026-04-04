@@ -30,16 +30,9 @@ require("blame_lines")
 require("scrollview_nvim")
 require("load_vimtex")
 
--- More config options
-vim.g.airline_powerline_fonts = 1
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	pattern = { "*" },
-	command = [[%s/\s\+$//e]],
-})
-
-vim.opt.wrap = true
-
--- Keybinds
-
--- colorscheme
-require("colorscheme_helper").set_colorscheme("synthweave")
+local custom_lua = vim.fn.stdpath("config") .. "/user_config.lua"
+if vim.uv.fs_stat(custom_lua) then
+	vim.cmd("luafile " .. custom_lua)
+else
+	require("default_config")
+end

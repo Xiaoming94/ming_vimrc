@@ -71,4 +71,4 @@ tags
 vimrc.d/specific.plugs.vimrc
 vimrc.d/useradded.vimrc
 nvim/local.nvimplugs.vimrc
-
+nvim/user_config.lua

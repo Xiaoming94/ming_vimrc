@@ -15,6 +15,10 @@ Plug 'mfussenegger/nvim-lint' " Linter
 Plug 'stevearc/conform.nvim' " Code Formatter
 Plug 'mfussenegger/nvim-jdtls' "JAVA lsp
 
+" Mason
+Plug 'mason-org/mason.nvim'
+Plug 'mason-org/mason-lspconfig.nvim'
+
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'

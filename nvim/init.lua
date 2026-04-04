@@ -4,17 +4,13 @@ require("vimplug_init")
 
 vim.cmd("source ~/.vimrc.d/common.vim")
 -- LSP stuff
+require("lsp.mason_setup")
 require("lsp.common_functions")
 require("lsp.clangd_conf")
 require("lsp.rust_analyzer_conf")
-require("lsp.lua_lsp_conf")
-require("lsp.pyright_conf")
 require("lsp.formatter")
 require("lsp.lint_conf")
-require("lsp.kotlin")
-require("lsp.ruby_rubocop")
 require("lsp.javalsp_conf")
-require("lsp.texlab_conf")
 
 -- import plugin configurations
 require("init_nvim_tree")

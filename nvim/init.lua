@@ -11,7 +11,7 @@ require("vimplug_init").execute(settings.use_meson)
 vim.cmd("source ~/.vimrc.d/common.vim")
 -- LSP stuff
 
-if settings.use_meson then
+if settings.use_meson or (settings.use_meson == nil) then
 	require("lsp.mason_setup")
 end
 
@@ -19,7 +19,7 @@ require("lsp.common_functions")
 require("lsp.formatter")
 require("lsp.lint_conf")
 
-if settings.provided_lsp then
+if settings.provided_lsp or (settings.provided_lsp == nil) then
 	require("lsp.clangd_conf")
 	require("lsp.rust_analyzer_conf")
 	require("lsp.javalsp_conf")
@@ -41,4 +41,6 @@ require("load_vimtex")
 
 if settings.post_settings then
 	settings.post_settings()
+else
+	require("default_config").post_settings()
 end

@@ -4,6 +4,7 @@ function VPInit.execute(use_mason)
 	local config_dir = vim.fn.stdpath("config")
 
 	local nvimplugs_file = config_dir .. "/nvimplugs.vimrc"
+
 	-- Initiating vimplugs
 	vim.cmd([[
     call plug#begin()
@@ -13,7 +14,7 @@ function VPInit.execute(use_mason)
 	-- Sourcing neovim plugins:
 	vim.cmd("source " .. nvimplugs_file)
 
-	if use_mason then
+	if use_mason or (use_mason == nil) then
 		vim.cmd([[
             " Mason
             Plug 'mason-org/mason.nvim'

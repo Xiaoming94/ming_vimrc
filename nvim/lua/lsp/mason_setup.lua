@@ -4,8 +4,6 @@ require("mason-lspconfig").setup({
 	ensure_installed = {
 		"lua_ls",
 		"pyright",
-		"jdtls",
-		"kotlin_lsp",
 		"rubocop",
 		"texlab",
 	},

@@ -7,10 +7,9 @@ source ~/.vimrc.d/plugs.vimrc
 " Sourcing common configs
 source ~/.vimrc.d/common.vim
 
-" Powerline
-" Vim powerline is not supported in neovim
-" Initializing powerline only outside neovim
-if !has('nvim') && has('python3')
+" Make sure that vim has python compatibility before
+" Initialising powerline
+if has('python3')
     python3 from powerline.vim import setup as powerline_setup
     python3 powerline_setup()
     python3 del powerline_setup
@@ -36,6 +35,11 @@ let g:gitsign#highlight#enable_marks = 1
 
 " Set vim swap directory
 set directory^=$HOME/.vim/swap//
+
+" Keybindings
+
+" NERDTreeToggle
+nnoremap <C-g>t : NERDTreeToggle<CR>
 
 let &t_ut=''
 " Source configs that are environmental dependant

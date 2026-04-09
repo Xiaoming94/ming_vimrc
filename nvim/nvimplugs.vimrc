@@ -37,7 +37,7 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug '0xstepit/flow.nvim'
 
 " Color Preview
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'catgoose/nvim-colorizer.lua'
 
 " Colorpicker
 

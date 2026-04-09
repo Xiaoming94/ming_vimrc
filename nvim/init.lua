@@ -1,4 +1,5 @@
 local vim = vim
+vim.g.powerline_loaded = 1
 
 local user_config_defined, settings = pcall(require, "user_config")
 if not user_config_defined then

@@ -1,9 +1,6 @@
 " Session manager
 Plug 'rmagatti/auto-session'
 
-" Tree-sitter?
-Plug 'nvim-treesitter/nvim-treesitter', {'commit': '7efc1b5'}
-
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'

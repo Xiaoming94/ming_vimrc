@@ -6,6 +6,7 @@ require("mason-lspconfig").setup({
 		"pyright",
 		"rubocop",
 		"texlab",
+		"ts_ls",
 	},
 })
 

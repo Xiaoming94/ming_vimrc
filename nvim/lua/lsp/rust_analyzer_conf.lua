@@ -13,14 +13,7 @@ vim.lsp.config("rust_analyzer", {
 			},
 			cargo = {
 				buildScripts = {
-					overrideCommand = {
-						"cargo",
-						"check",
-						"--message-format=json",
-					},
-				},
-				features = {
-					ssr,
+					enable = true,
 				},
 				loadOutDirsFromCheck = {
 					enable = true,
@@ -28,6 +21,9 @@ vim.lsp.config("rust_analyzer", {
 			},
 			procMacro = {
 				enable = true,
+				attributes = {
+					enable = true,
+				},
 			},
 		},
 	},
